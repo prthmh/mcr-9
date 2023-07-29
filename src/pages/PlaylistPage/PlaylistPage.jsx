@@ -1,5 +1,5 @@
 import React from "react";
-import "./PlaylistPage.css";
+import "./PlaylistP.css";
 import { useData } from "../../context/DataContext";
 import { Link } from "react-router-dom";
 
