@@ -20,8 +20,9 @@ const PageNavSec = () => {
         <i className="fa-solid fa-list-ul"></i> Playlist
       </div>
       <div className="nav_element">
-        {" "}
-        <i className="fa-solid fa-clock"></i> Watch later
+        <NavLink to="/watchLater" className="navLink">
+          <i className="fa-solid fa-clock"></i> Watch later
+        </NavLink>
       </div>
     </div>
   );

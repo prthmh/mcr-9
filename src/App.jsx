@@ -8,6 +8,7 @@ import PageTemplate from "./pages/PageTemplate/PageTemplate";
 import Landing from "./pages/Landing/Landing";
 import Explore from "./pages/Explore/Explore";
 import Listing from "./pages/Listing/Listing";
+import WatchLater from "./pages/WatchLater/WatchLater";
 
 function App() {
   return (
@@ -34,6 +35,14 @@ function App() {
           element={
             <PageTemplate>
               <Listing />
+            </PageTemplate>
+          }
+        />
+        <Route
+          path="/watchLater"
+          element={
+            <PageTemplate>
+              <WatchLater />
             </PageTemplate>
           }
         />
