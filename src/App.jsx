@@ -12,8 +12,8 @@ import Explore from "./pages/Explore/Explore";
 import Listing from "./pages/Listing/Listing";
 import WatchLater from "./pages/WatchLater/WatchLater";
 import PlaylistPage from "./pages/PlaylistPage/PlaylistPage";
-import PlaylistVideos from "./pages/PlaylistVideos/Playlistvideos";
 import SingleVideo from "./pages/SingleVideo/SingleVideo";
+import PlaylistVideos from "./pages/PlaylistVideos/Playlistvideos";
 
 function App() {
   return (
