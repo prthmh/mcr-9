@@ -1,0 +1,31 @@
+.playlist {
+  max-width: 250px;
+  position: relative;
+}
+.playlist_pic {
+  width: 250px;
+  height: 150px;
+  border-radius: 0.4rem;
+}
+
+.cancel {
+  cursor: pointer;
+  background-color: #91bae8;
+  border-radius: 0 0.4rem;
+  padding: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.play_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.add_playlist {
+  font-size: 1.4rem;
+  cursor: pointer;
+}

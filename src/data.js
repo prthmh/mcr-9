@@ -231,3 +231,34 @@ export const videos = [
     creator: "PaperArtDimensions",
   },
 ];
+
+export const playlistsData = [
+  {
+    id: 1,
+    name: "Demo PlayList",
+    description: "Test playlist",
+    thumbnail: "https://picsum.photos/310/174",
+    vids: [
+      {
+        _id: 34,
+        title: "Stop Motion Animation Tips and Tricks",
+        views: 3172,
+        chips: ["stop motion", "animation", "tips", "tricks"],
+        thumbnail: "https://picsum.photos/310/174",
+        src: "https://www.youtube.com/embed/GBIIQ0kP15E",
+        category: "Stop Motion",
+        creator: "AnimateMagic",
+      },
+      {
+        _id: 35,
+        title: "Pottery Art Exhibition - Celebrating Local Artists",
+        views: 2879,
+        chips: ["pottery", "clay", "art exhibition", "local artists"],
+        thumbnail: "https://picsum.photos/311/174",
+        src: "https://www.youtube.com/embed/GBIIQ0kP15E",
+        category: "Pottery",
+        creator: "ArtisticExpressions",
+      },
+    ],
+  },
+];
