@@ -10,9 +10,14 @@ export const DataProvider = ({ children }) => {
     watchList: [],
   };
   const [dataState, dataDispatch] = useReducer(DataReducer, initialState);
-  console.log(dataState);
+
+  const isInWatchList = (vidId) => {
+    const findVid = dataState?.watchList.find((item) => item._id === vidId);
+    return Boolean(findVid);
+  };
+
   return (
-    <DataContext.Provider value={{ dataState, dataDispatch }}>
+    <DataContext.Provider value={{ dataState, dataDispatch, isInWatchList }}>
       {children}
     </DataContext.Provider>
   );

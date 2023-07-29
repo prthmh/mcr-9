@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landing.css";
 import { useData } from "../../context/DataContext";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const {
@@ -12,13 +13,15 @@ const Landing = () => {
       <div className="categories">
         {vidCategories?.map((item) => (
           <div className="item" key={item._id}>
-            <img
-              src={item.thumbnail}
-              alt={item.category}
-              className="category_img"
-            />
+            <Link to={`/videos/${item.category}`} className="navLink">
+              <img
+                src={item.thumbnail}
+                alt={item.category}
+                className="category_img"
+              />
 
-            <p>{item.category}</p>
+              <p>{item.category}</p>
+            </Link>
           </div>
         ))}
       </div>

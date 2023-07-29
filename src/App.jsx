@@ -6,6 +6,8 @@ import { Route, Routes } from "react-router-dom";
 
 import PageTemplate from "./pages/PageTemplate/PageTemplate";
 import Landing from "./pages/Landing/Landing";
+import Explore from "./pages/Explore/Explore";
+import Listing from "./pages/Listing/Listing";
 
 function App() {
   return (
@@ -19,7 +21,22 @@ function App() {
             </PageTemplate>
           }
         />
-        <Route path="/explore" />
+        <Route
+          path="/explore"
+          element={
+            <PageTemplate>
+              <Explore />
+            </PageTemplate>
+          }
+        />
+        <Route
+          path="/videos/:categoryName"
+          element={
+            <PageTemplate>
+              <Listing />
+            </PageTemplate>
+          }
+        />
       </Routes>
     </>
   );

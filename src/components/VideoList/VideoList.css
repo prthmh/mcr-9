@@ -1,0 +1,38 @@
+.vid_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.vid_img {
+  width: 250px;
+  height: 150px;
+  border-radius: 0.4rem;
+}
+.vid_item {
+  max-width: 250px;
+  position: relative;
+}
+.vid_info {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+.vid_pic > img {
+  border-radius: 50%;
+}
+.vid_title > span {
+  font-size: 0.9rem;
+}
+
+.watch_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #91bae8;
+  overflow: hidden;
+  padding: 0.5rem;
+  border-radius: 0 0.4rem;
+}

@@ -13,3 +13,8 @@
   flex-basis: 90%;
   padding: 0.5rem;
 }
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
+}

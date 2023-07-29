@@ -6,12 +6,12 @@ const PageNavSec = () => {
   return (
     <div className="page_nav">
       <div className="nav_element">
-        <NavLink to="/" >
+        <NavLink to="/" className="navLink">
           <i className="fa-solid fa-house"></i> Home
         </NavLink>
       </div>
       <div className="nav_element">
-        <NavLink to="/explore" >
+        <NavLink to="/explore" className="navLink">
           <i className="fa-solid fa-compass"></i> Explore
         </NavLink>
       </div>
