@@ -13,7 +13,8 @@ import Listing from "./pages/Listing/Listing";
 import WatchLater from "./pages/WatchLater/WatchLater";
 import PlaylistPage from "./pages/PlaylistPage/PlaylistPage";
 import SingleVideo from "./pages/SingleVideo/SingleVideo";
-import PlaylistVideos from "./pages/PlaylistVideos/Playlistvideos";
+import PlayListVids from "./pages/PlayListVids/PlayListVids";
+
 
 function App() {
   return (
@@ -75,7 +76,7 @@ function App() {
           path="/playlist/:playlistId"
           element={
             <PageTemplate>
-              <PlaylistVideos />
+              <PlayListVids />
             </PageTemplate>
           }
         />

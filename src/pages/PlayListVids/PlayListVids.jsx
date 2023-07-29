@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useData } from "../../context/DataContext";
 import VideoList from "../../components/VideoList/VideoList";
 
-const PlaylistVideos = () => {
+const PlayListVids = () => {
   const { playlistId } = useParams();
   const {
     dataState: { playlists },
@@ -17,4 +17,4 @@ const PlaylistVideos = () => {
   );
 };
 
-export default PlaylistVideos;
+export default PlayListVids;
