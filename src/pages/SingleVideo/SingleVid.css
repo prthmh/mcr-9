@@ -1,0 +1,15 @@
+.vid_info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.playlist_add_btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+}

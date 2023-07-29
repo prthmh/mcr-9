@@ -13,6 +13,7 @@ import Listing from "./pages/Listing/Listing";
 import WatchLater from "./pages/WatchLater/WatchLater";
 import PlaylistPage from "./pages/PlaylistPage/PlaylistPage";
 import PlaylistVideos from "./pages/PlaylistVideos/Playlistvideos";
+import SingleVideo from "./pages/SingleVideo/SingleVideo";
 
 function App() {
   return (
@@ -75,6 +76,14 @@ function App() {
           element={
             <PageTemplate>
               <PlaylistVideos />
+            </PageTemplate>
+          }
+        />
+        <Route
+          path="/video/:vidId"
+          element={
+            <PageTemplate>
+              <SingleVideo />
             </PageTemplate>
           }
         />
