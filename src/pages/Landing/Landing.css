@@ -1,0 +1,12 @@
+.categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.category_img {
+  width: 250px;
+  height: 150px;
+  border-radius: 0.4rem;
+}

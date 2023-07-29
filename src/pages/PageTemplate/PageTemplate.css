@@ -1,5 +1,15 @@
-.template{
-    display: flex;
-    flex-direction: row;
-    
+.template {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 5rem 0rem 5rem;
+}
+
+.nav_section {
+  flex-basis: 12%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+.page_content {
+  flex-basis: 90%;
+  padding: 0.5rem;
 }

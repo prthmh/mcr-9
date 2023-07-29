@@ -4,13 +4,25 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
-function App() {
+import PageTemplate from "./pages/PageTemplate/PageTemplate";
+import Landing from "./pages/Landing/Landing";
 
-  return <>
-  <Routes>
-    <Route path="/"  />
-  </Routes>
-  </>;
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PageTemplate>
+              <Landing />
+            </PageTemplate>
+          }
+        />
+        <Route path="/explore" />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

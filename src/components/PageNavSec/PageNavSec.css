@@ -1,0 +1,9 @@
+.page_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.nav_element {
+  color: #183153;
+  font-size: 1.3rem;
+}
