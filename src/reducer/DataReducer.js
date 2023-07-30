@@ -2,19 +2,25 @@ export const DataReducer = (dataState, { type, payload }) => {
   switch (type) {
     case "SET_STATE": {
       console.log("redu", payload);
-      return payload;
+      dataState = payload;
+      break;
     }
     case "UPDATE_WATCHLIST":
-      return { ...dataState, watchList: payload };
+      dataState = { ...dataState, watchList: payload };
+      break;
     case "UPDATE_PLAYLIST":
-      return { ...dataState, playlists: payload };
+      dataState = { ...dataState, playlists: payload };
+      break;
     case "DELETE_VID": {
       const newPlaylists = dataState.playlists.filter(
         (item) => item.id !== payload.id
       );
-      return { ...dataState, playlists: [...newPlaylists, payload] };
+      dataState = { ...dataState, playlists: [...newPlaylists, payload] };
+      break;
     }
     default:
-      return dataState;
+      break;
   }
+  localStorage.setItem("mcr9", JSON.stringify(dataState));
+  return dataState;
 };

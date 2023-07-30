@@ -39,30 +39,19 @@ export const DataProvider = ({ children }) => {
       (item) => item.id === Number(playlistId)
     );
     const newVidList = targetPlaylist.vids.filter((item) => item._id !== vidId);
-    const newPlaylist = {...targetPlaylist, vids: newVidList}
-    dataDispatch({type: "DELETE_VID",payload: newPlaylist})
+    const newPlaylist = { ...targetPlaylist, vids: newVidList };
+    dataDispatch({ type: "DELETE_VID", payload: newPlaylist });
   };
 
-  //   useEffect(() => {
-  //     const stateInStorage = JSON.parse(localStorage.getItem("mcr9"));
-  //     console.log("b",stateInStorage);
-  //     if (stateInStorage) {
-  //       dataDispatch({ type: "SET_STATE", payload: stateInStorage });
-  //     } else {
-  //       localStorage.setItem("mcr9", JSON.stringify(initialState));
-  //       dataDispatch({ type: "SET_STATE", payload: initialState });
-  //     }
-  //   }, []);
-  //   useEffect(() => {
-  //     const stateInStorage = JSON.parse(localStorage.getItem("mcr9"));
-  //     console.log("l", stateInStorage);
-  //     dataDispatch({ type: "SET_STATE", payload: stateInStorage });
-  //   }, []);
-
-  //   useEffect(() => {
-  //     localStorage.setItem("mcr9", JSON.stringify(dataState));
-  //     console.log(1);
-  //   });
+  useEffect(() => {
+    const stateInStorage = JSON.parse(localStorage.getItem("mcr9"));
+    console.log("b", stateInStorage);
+    if (stateInStorage) {
+      dataDispatch({ type: "SET_STATE", payload: stateInStorage });
+    } else {
+      dataDispatch({ type: "SET_STATE", payload: dataState });
+    }
+  }, []);
 
   return (
     <DataContext.Provider
@@ -73,7 +62,7 @@ export const DataProvider = ({ children }) => {
         deletePlayList,
         showAddPlaylistModal,
         setShowAddPlaylistModal,
-        deleteVidInPlaylist
+        deleteVidInPlaylist,
       }}
     >
       {children}
