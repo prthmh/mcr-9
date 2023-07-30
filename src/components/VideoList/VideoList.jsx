@@ -33,22 +33,23 @@ const VideoList = ({ list }) => {
         <>
           {list?.map((video) => (
             <div className="vid_item" key={video._id}>
-              <Link to={`/video/${video._id}`} className="navLink" >
+              <div
+                className="watch_icon"
+                onClick={() => handleWatchLater(video)}
+              >
+                {isInWatchList(video._id) ? (
+                  <i className="fa-solid fa-clock"></i>
+                ) : (
+                  <i className="fa-regular fa-clock"></i>
+                )}
+              </div>
+              <Link to={`/video/${video._id}`} className="navLink">
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   className="vid_img"
                 />
-                <div
-                  className="watch_icon"
-                  onClick={() => handleWatchLater(video)}
-                >
-                  {isInWatchList(video._id) ? (
-                    <i className="fa-solid fa-clock"></i>
-                  ) : (
-                    <i className="fa-regular fa-clock"></i>
-                  )}
-                </div>
+
                 <div className="vid_info">
                   <div className="vid_pic">
                     <img src=" https://picsum.photos/40/40" alt="pic" />
@@ -63,14 +64,15 @@ const VideoList = ({ list }) => {
                     </span>
                   </div>
                 </div>
-                {currentPath.includes("playlist") && (
-                  <button
-                    onClick={() => deleteVidInPlaylist(video._id, playlistId)}
-                  >
-                    Delete
-                  </button>
-                )}
               </Link>
+              {currentPath.includes("playlist") && (
+                <button
+                  onClick={() => deleteVidInPlaylist(video._id, playlistId)}
+                  className="delete_vid"
+                >
+                  Delete
+                </button>
+              )}
             </div>
           ))}
         </>

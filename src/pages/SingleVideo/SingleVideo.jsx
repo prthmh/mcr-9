@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useData } from "../../context/DataContext";
 import { MdOutlineEditNote } from "react-icons/md";
 import "./SingleVid.css";
+import AddToPlaylistModal from "../../components/AddToPlaylistModal/AddToPlaylistModal";
 
 const SingleVideo = () => {
   const { vidId } = useParams();
+  const [showAddToPlaylistModal, setShowAddToPlaylistModal] = useState(false);
   const {
     dataState: { vids, watchList },
     isInWatchList,
@@ -13,7 +15,6 @@ const SingleVideo = () => {
   } = useData();
   const findVid = vids.find((item) => item._id === Number(vidId));
   const handleWatchLater = (vid) => {
-    console.log(vid);
     if (isInWatchList(vid._id)) {
       const newWatchList = watchList.filter((v) => v._id !== vid._id);
       dataDispatch({ type: "UPDATE_WATCHLIST", payload: newWatchList });
@@ -32,7 +33,7 @@ const SingleVideo = () => {
         // allowFullScreen
         title="Embedded youtube"
       />
-      <div className="vid_info">
+      <div className="v_info">
         <h3>{findVid.title}</h3>
         <div className="btns">
           <div
@@ -45,11 +46,35 @@ const SingleVideo = () => {
               <i className="fa-regular fa-clock"></i>
             )}
           </div>
+          <div
+            className="playlist_add_btn"
+            onClick={() => setShowAddToPlaylistModal(true)}
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ marginTop: "0.3rem" }}
+            >
+              add_notes
+            </span>
+          </div>
           <div className="playlist_add_btn">
-            <MdOutlineEditNote />
+            <span
+              className="material-symbols-outlined"
+              style={{ marginTop: "0.3rem" }}
+            >
+              edit_note
+            </span>
           </div>
         </div>
       </div>
+      {showAddToPlaylistModal && (
+        <div className="modal">
+          <AddToPlaylistModal
+            currentVid={findVid}
+            setShowAddToPlaylistModal={setShowAddToPlaylistModal}
+          />
+        </div>
+      )}
     </div>
   );
 };

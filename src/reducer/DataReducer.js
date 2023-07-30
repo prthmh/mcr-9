@@ -1,7 +1,6 @@
 export const DataReducer = (dataState, { type, payload }) => {
   switch (type) {
     case "SET_STATE": {
-      console.log("redu", payload);
       dataState = payload;
       break;
     }

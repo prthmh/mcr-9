@@ -1,0 +1,43 @@
+.add_playL_modal {
+  background-color: #c5daf2;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  margin-top: 0;
+  background-color: #183153;
+  height: 0.8px;
+  border: none;
+}
+.playL {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem;
+}
+.playL_name {
+  padding: 0.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.delete_playL {
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.close_playl_modal {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  width: fit-content;
+  padding: 0.4rem;
+  font: inherit;
+  align-self: center;
+  cursor: pointer;
+  align-self: center;
+}

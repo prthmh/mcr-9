@@ -45,7 +45,6 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     const stateInStorage = JSON.parse(localStorage.getItem("mcr9"));
-    console.log("b", stateInStorage);
     if (stateInStorage) {
       dataDispatch({ type: "SET_STATE", payload: stateInStorage });
     } else {

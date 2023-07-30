@@ -37,3 +37,14 @@
   border-radius: 0 0.4rem;
   cursor: pointer;
 }
+.delete_vid {
+  margin-top: 0.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  width: fit-content;
+  padding: 0.2rem;
+  font: inherit;
+  cursor: pointer;
+}
