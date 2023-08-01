@@ -1,0 +1,41 @@
+.note_modal {
+  background-color: #c5daf2;
+  padding: 0.7rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
+}
+
+.note_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.note_input {
+  border-radius: 0.3rem;
+  margin-top: 0.2rem;
+  height: 1.6rem;
+  border: none;
+  border: 1px solid;
+  font: inherit;
+  font-size: 0.9rem;
+}
+.save,
+.cancel_note {
+  background-color: #183153;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  width: fit-content;
+  padding: 0.4rem;
+  font: inherit;
+  align-self: center;
+  cursor: pointer;
+}
+
+.cancel_note {
+  background-color: red;
+  align-self: center;
+}

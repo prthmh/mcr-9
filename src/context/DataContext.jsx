@@ -43,6 +43,13 @@ export const DataProvider = ({ children }) => {
     dataDispatch({ type: "DELETE_VID", payload: newPlaylist });
   };
 
+  const getExplorePageVids = (search, vids) => {
+    const newList = vids?.filter((vid) =>
+      vid?.title.toLowerCase().includes(search.toLowerCase())
+    );
+    return newList;
+  };
+
   useEffect(() => {
     const stateInStorage = JSON.parse(localStorage.getItem("mcr9"));
     if (stateInStorage) {
@@ -62,6 +69,7 @@ export const DataProvider = ({ children }) => {
         showAddPlaylistModal,
         setShowAddPlaylistModal,
         deleteVidInPlaylist,
+        getExplorePageVids,
       }}
     >
       {children}

@@ -1,0 +1,14 @@
+.more_vid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vid_thumbnail {
+  width: 160px;
+  height: 100px;
+  border-radius: 0.5rem;
+}
+.vid_detail{
+    font-size: 0.9rem;
+}

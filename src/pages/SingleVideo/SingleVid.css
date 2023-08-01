@@ -14,3 +14,19 @@
 .playlist_add_btn {
   cursor: pointer;
 }
+ul {
+  margin-top: 0;
+}
+.note_action_btns {
+  display: inline;
+  position: relative;
+  top: 6px;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+
+.single_vid_page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 0.8rem;
+}

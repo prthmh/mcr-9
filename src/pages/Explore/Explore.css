@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 22rem;
+  margin-bottom: 0.8rem;
+}
+.header > h2 {
+  margin: 0;
+}
+
+.search_input {
+  border-radius: 0.3rem;
+  margin-top: 0.2rem;
+  height: 1.8rem;
+  border: none;
+  border: 1px solid;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+}
+
+.search_icon {
+  position: relative;
+  top: 6px;
+  right: 4px;
+}
