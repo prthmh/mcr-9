@@ -20,8 +20,8 @@ export const DataReducer = (dataState, { type, payload }) => {
       dataState = {
         ...dataState,
         vids: dataState?.vids.map((vid) =>
-          vid._id === payload.vidId
-            ? { ...vid, notes: [...vid.notes, payload.note] }
+          vid?._id === payload?.vidId
+            ? { ...vid, notes: [...vid?.notes, payload.note] }
             : vid
         ),
       };

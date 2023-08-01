@@ -10,7 +10,6 @@ const Explore = () => {
   } = useData();
   const [search, setSearch] = useState("");
   const videoList = getExplorePageVids(search, vids);
-  console.log(search);
   return (
     <div>
       <div className="header">
