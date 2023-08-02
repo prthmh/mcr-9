@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Explore.css";
 import { useData } from "../../context/DataContext";
 import VideoList from "../../components/VideoList/VideoList";

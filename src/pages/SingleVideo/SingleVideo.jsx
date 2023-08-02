@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useData } from "../../context/DataContext";
-import { MdOutlineEditNote } from "react-icons/md";
+// import { MdOutlineEditNote } from "react-icons/md";
 import "./SingleVid.css";
 import AddToPlaylistModal from "../../components/AddToPlaylistModal/AddToPlaylistModal";
 import NoteModal from "../../components/NoteModal/NoteModal";
@@ -12,6 +12,7 @@ const SingleVideo = () => {
   const [showAddToPlaylistModal, setShowAddToPlaylistModal] = useState(false);
   const [showNoteModal, setShowNoteModal] = useState(false);
   const [showEditNoteModal, setShowEditNoteModal] = useState(false);
+  const [editNote, setEditNote] = useState({});
 
   const {
     dataState: { vids, watchList },
@@ -87,7 +88,10 @@ const SingleVideo = () => {
                   <div className="note_action_btns">
                     <span
                       className="material-symbols-outlined"
-                      onClick={() => setShowEditNoteModal(true)}
+                      onClick={() => {
+                        setShowEditNoteModal(true);
+                        setEditNote(note);
+                      }}
                     >
                       edit
                     </span>
@@ -103,15 +107,6 @@ const SingleVideo = () => {
                       delete
                     </span>
                   </div>
-                  {showEditNoteModal && (
-                    <div className="modal">
-                      <NoteModal
-                        currentVid={findVid}
-                        note={note}
-                        setShowEditNoteModal={setShowEditNoteModal}
-                      />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -130,6 +125,15 @@ const SingleVideo = () => {
             <NoteModal
               currentVid={findVid}
               setShowNoteModal={setShowNoteModal}
+            />
+          </div>
+        )}
+        {showEditNoteModal && (
+          <div className="modal">
+            <NoteModal
+              currentVid={findVid}
+              note={editNote}
+              setShowEditNoteModal={setShowEditNoteModal}
             />
           </div>
         )}

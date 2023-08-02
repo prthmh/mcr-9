@@ -21,7 +21,7 @@ export const DataReducer = (dataState, { type, payload }) => {
         ...dataState,
         vids: dataState?.vids.map((vid) =>
           vid?._id === payload?.vidId
-            ? { ...vid, notes: [...vid?.notes, payload.note] }
+            ? { ...vid, notes: [...vid.notes, payload.note] }
             : vid
         ),
       };
@@ -40,7 +40,9 @@ export const DataReducer = (dataState, { type, payload }) => {
             : vid
         ),
       };
+      break;
     case "DELETE_NOTE":
+      console.log("redu",payload.note)
       dataState = {
         ...dataState,
         vids: dataState?.vids.map((vid) =>
@@ -54,6 +56,7 @@ export const DataReducer = (dataState, { type, payload }) => {
             : vid
         ),
       };
+      break;
     default:
       break;
   }
